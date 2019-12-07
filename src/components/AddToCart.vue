@@ -40,6 +40,7 @@ export default {
         position: absolute;
         bottom: 10px;
         right:10px;
+        z-index: 999999;
         
         
         > button {

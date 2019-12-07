@@ -149,8 +149,39 @@ export default {
       > li {
         padding: 10px 0;
         border-top: 1px solid #efefef;
+        
         > a {
           color: #60341f;
+          position: relative;
+          &::before{
+            position: absolute;
+            top: 0;
+            left: 10px;
+            opacity: 0;
+            content: '';
+            background: $Color;
+            border-radius: 100%;
+            width:8px;
+            height:8px;
+            transition: .2s ease-in-out;
+            transform: translateY(50%);
+          }
+          &:hover{
+            color:$Color;
+          }
+
+          &:hover::before{
+            position: absolute;
+            top: 0;
+            left: -15px;
+            content: '';
+            background: $Color;
+            border-radius: 100%;
+            width:8px;
+            height:8px;
+            opacity: 1;
+            transform: translateY(50%);
+          }
         }
       }
     }

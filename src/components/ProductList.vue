@@ -115,11 +115,11 @@ export default {
 <style lang="scss">
 #product {
   width: 100%;
-  padding: 0 0 80px 0;
+  padding: 40px 0 80px 0;
+  overflow: hidden;
   > .p-container {
     width: 100%;
     padding: 0;
-    overflow: visible;
     > .p-title {
       text-align: center;
       margin-bottom: 80px;
@@ -165,6 +165,90 @@ export default {
 
 .VueCarousel-dot {
   margin: 0 !important;
+}
+
+.swiper-container {
+  margin: auto;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  overflow-y: visible!important;
+  overflow-x: visible!important;
+  list-style: none;
+  padding: 0;
+  /* Fix of Webkit flickering */
+  z-index: 1;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 10%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  overflow:visible!important;
+}
+
+.swiper-slide {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 300px!important;
+  height: 100%!important;
+  position: relative;
+  border: 1px solid #efefef;
+  background: #fff;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  overflow:visible!important;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: 0.2;
+  margin: 0 10px!important;
+}
+.swiper-pagination {
+  position: absolute;
+  bottom: -45px!important;
+  text-align: center;
+  -webkit-transition: 300ms opacity;
+  -o-transition: 300ms opacity;
+  transition: 300ms opacity;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 9999999999999!important;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(2)!important;
+  background: #ff9a9e!important;
+}
+
+.goodsimg {
+  overflow: hidden!important;
+  height: 300px!important;
+  border-bottom: 1px dotted pink;
+  > img {
+    width: 100%!important;
+  }
 }
 
 @media screen and (max-width: 767px) {
